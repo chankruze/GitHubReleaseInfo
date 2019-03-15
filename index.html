@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Github Release Info</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Get release info like downloads, release dates, author of any Github project">
+    <meta name="keywords" content="Github, release, download, counter, github release Info, github download count">
+
+    <!-- CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" />
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="#"><i class="fas fa-poll Blink"></i> GitHub Release Info</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav mr-auto"></ul>
+                <span><i class='far fa-user'></i>&nbsp;&nbsp;chankruze</span>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Input-->
+    <div class="container">
+        <div class="jumbotron input-header" align="center">
+            <div class="col-md-4 col-md-offset-4">
+                <h2>Enter project details</h2>
+                <div class="form form-inline">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="username" placeholder="Github username">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="repository" placeholder="Repository name">
+                    </div>
+                    <button class="btn btn-primary" id="get-stats-button">Get release info !</button>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="row" id="ads">
+            <div class="col-md-6 col-md-offset-2">
+                
+            </div>
+        </div> -->
+        <div class="row" id="stats-result">
+        </div>
+        <div id="loader-gif">
+            <img src="img/gif-load.gif">
+        </div>
+    </div>
+    <div id="footer">
+        <div class="container">
+            Made with <i class="fas fa-heart"></i> by <a href="https://geekofia.in" target="_blank">chankruze</a>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+
+</html>
