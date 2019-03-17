@@ -2,6 +2,29 @@ html * {
     font-family: 'Roboto', sans-serif;
 }
 
+/** Scroll Bar **/
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+    background-color: #aaa;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
 a, a:hover {
     color: rgba(66, 139, 202, 1);
 }
@@ -16,6 +39,7 @@ code {
 .form-group {
     width: 100%;
 }
+
 #username, #repository, #get-stats-button {
     margin-top: 10px;
     width: 100%;
@@ -113,13 +137,13 @@ code {
     text-align: center;
 }
 
-#title > h1 {
+#title>h1 {
     display: inline;
     margin-right: 10px;
     font-weight: bold;
 }
 
-#title > span {
+#title>span {
     font-size: 24px;
 }
 
@@ -127,6 +151,7 @@ html {
     position: relative;
     min-height: 100%;
 }
+
 body {
     margin-bottom: 40px;
 }
@@ -144,21 +169,21 @@ body {
     margin-top: 20px;
 }
 
-.fa-poll{
+.fa-poll {
     color: #00c288;
     font-size: 1.5em;
 }
 
-#github-logo{
+#github-logo {
     height: 100px;
     width: 100px;
     float: right;
 }
 
-h2{
+h2 {
     text-transform: capitalize;
 }
 
-.input-header{
+.input-header {
     background: transparent !important;
 }
