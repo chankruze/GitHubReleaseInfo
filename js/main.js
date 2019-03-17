@@ -38,27 +38,28 @@ $("#username").keyup(function (event) {
     }
 });
 
-// // Callback function for getting user repositories
-// function getUserRepos() {
-//     var user = $("#username").val();
+// Callback function for getting user repositories
+function getUserRepos() {
+    var user = $("#username").val();
 
-//     var autoComplete = $('#repository').typeahead({ 
-//         autoSelect: true,
-//         afterSelect: function() {
-//             $("#get-stats-button").click();
-//         }
-//      });
-//     var repoNames = [];
+    var repoNames = [];
 
-//     var url = apiRoot + "users/" + user + "/repos";
-//     $.getJSON(url, function(data) {
-//         $.each(data, function(index, item) {
-//             repoNames.push(item.name);
-//         });
-//     });
+    var url = apiRoot + "users/" + user + "/repos";
+    $.getJSON(url, function (data) {
+        $.each(data, function (index, item) {
+            repoNames.push(item.name);
+        });
+    });
 
-//     autoComplete.data('typeahead').source = repoNames;
-// }
+    $('#repository').typeahead({
+        source: repoNames,
+        autoSelect: true,
+        items: 'all',
+        afterSelect: function () {
+            $("#get-stats-button").click();
+        }
+    });
+}
 
 // Display the stats
 function showStats(data) {
@@ -195,7 +196,7 @@ $(function () {
     validateInput();
     $("#username, #repository").keyup(validateInput);
 
-    // $("#username").change(getUserRepos);
+    $("#username").change(getUserRepos);
 
     $("#get-stats-button").click(function () {
         window.location = "?username=" + $("#username").val() +
@@ -211,7 +212,7 @@ $(function () {
         $("#username").val(username);
         $("#repository").val(repository);
         validateInput();
-        // getUserRepos();
+        getUserRepos();
         $(".output").hide();
         $("#loader-gif").show();
         getStats();
