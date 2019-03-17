@@ -122,7 +122,7 @@ function showStats(data) {
 
                     downloadInfoHTML += "<li><i class='far fa-file'></i>&nbsp;&nbsp;<code>" + asset.name + "</code> (" + assetSize + "&nbsp;MiB)</li>" +
                         "<li><i class='fas fa-download'></i>&nbsp;&nbsp;Downloads: " + formatNumber(asset.download_count) + "</li>" +
-                        "<li><i class='far fa-calendar-alt'></i>&nbsp;&nbsp;Last&nbsp;updated&nbsp;on&nbsp;" + lastUpdate + "</li>";
+                        "<li><i class='far fa-calendar-alt'></i>&nbsp;&nbsp;Last&nbsp;updated&nbsp;:&nbsp;" + lastUpdate + "</li>";
 
                     totalDownloadCount += asset.download_count;
                     releaseDownloadCount += asset.download_count;
